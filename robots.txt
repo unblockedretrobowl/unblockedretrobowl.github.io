@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://unblockedretrobowl.github.io/sitemap.xml

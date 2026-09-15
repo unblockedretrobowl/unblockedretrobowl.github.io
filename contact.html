@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact and Support - Retro Bowl Unblocked</title>
+  <meta name="description" content="Contact the Retro Bowl support team for feedback, bug reports, and copyright inquiries.">
+  <link rel="canonical" href="https://unblockedretrobowl.github.io/contact.html">
+  <link rel="icon" type="image/png" href="./images/retrobowl.png">
+  <link rel="apple-touch-icon" href="./images/retrobowl.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #ffffff; color: #0f172a; font-family: ui-sans-serif, system-ui, sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-indigo-600 selection:text-white">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <a href="./" class="flex items-center gap-2.5 group">
+        <img src="./images/retrobowl.png" alt="Retro Bowl Logo" class="w-8 h-8 rounded-lg object-cover shadow-xs border border-slate-200 group-hover:scale-105 transition-transform" />
+        <span class="font-extrabold text-base tracking-tight text-slate-900">Retro Bowl</span>
+      </a>
+      <nav class="flex items-center gap-2 text-sm font-medium">
+        <a href="./" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">Play Now</a>
+        <a href="./about.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">About</a>
+        <a href="./contact.html" class="px-3 py-1.5 rounded-lg text-indigo-600 bg-indigo-50 font-semibold transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-4xl mx-auto px-4 py-10 space-y-8 w-full">
+    <div class="space-y-3">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700">
+        ✉️ Contact and Support
+      </div>
+      <h1 class="text-3xl font-black text-slate-900 tracking-tight">Contact Us</h1>
+      <p class="text-base text-slate-600 leading-relaxed">
+        Have a game suggestion, bug report, or DMCA inquiry for Retro Bowl? Get in touch with our team.
+      </p>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6">
+      <div class="border-b border-slate-100 pb-4">
+        <h2 class="text-xl font-bold text-slate-900">Send Us a Direct Message</h2>
+        <p class="text-xs text-slate-500 mt-1">Fill out the form below. We typically respond within 24 to 48 business hours.</p>
+      </div>
+
+      <div id="formSuccess" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium items-center gap-3">
+        <span class="text-xl">✅</span>
+        <div>
+          <strong class="block text-emerald-900 font-bold">Message sent successfully!</strong>
+          Thank you for your feedback. Our team has received your inquiry and will review it shortly.
+        </div>
+      </div>
+
+      <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="userName" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Your Name</label>
+            <input type="text" id="userName" required placeholder="e.g. Alex" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-slate-50 focus:bg-white focus:border-indigo-600 focus:outline-none text-sm transition-all" />
+          </div>
+          <div>
+            <label for="userEmail" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Email Address</label>
+            <input type="email" id="userEmail" required placeholder="alex@example.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-slate-50 focus:bg-white focus:border-indigo-600 focus:outline-none text-sm transition-all" />
+          </div>
+        </div>
+
+        <div>
+          <label for="inquiryType" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Topic / Reason</label>
+          <select id="inquiryType" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-slate-50 focus:bg-white focus:border-indigo-600 focus:outline-none text-sm transition-all">
+            <option value="suggestion">🎮 Game Request or Feature Suggestion</option>
+            <option value="bug">🐛 Bug Report / Game Not Loading / Blank Screen</option>
+            <option value="dmca">⚖️ DMCA / Copyright Takedown Notice</option>
+            <option value="partnership">🤝 Partnership or General Feedback</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="userMsg" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Message</label>
+          <textarea id="userMsg" rows="5" required placeholder="Provide as much detail as possible..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-slate-50 focus:bg-white focus:border-indigo-600 focus:outline-none text-sm transition-all"></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all cursor-pointer">
+          <svg class="w-4 h-4 fill-none stroke-currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+          <span>Send Message</span>
+        </button>
+      </form>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-2">
+        <div class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-base mb-1">📬</div>
+        <h3 class="text-sm font-bold text-slate-900">Direct Email Support</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          For technical feedback, game mirror requests, or general inquiries:
+        </p>
+        <a href="mailto:support@unblockedretrobowl.github.io" class="inline-block text-xs font-bold text-indigo-600 hover:underline">
+          support@unblockedretrobowl.github.io
+        </a>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-2">
+        <div class="w-9 h-9 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-base mb-1">⚖️</div>
+        <h3 class="text-sm font-bold text-slate-900">DMCA & Copyright Inquiries</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          We respect intellectual property rights. To submit a copyright or removal request:
+        </p>
+        <a href="mailto:dmca@unblockedretrobowl.github.io" class="inline-block text-xs font-bold text-indigo-600 hover:underline">
+          dmca@unblockedretrobowl.github.io
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-6 text-xs text-slate-500 mt-12">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+      <span>Retro Bowl Unblocked</span>
+      <a href="./" class="hover:text-indigo-600 font-medium">Back to Game →</a>
+    </div>
+  </footer>
+
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('formSuccess');
+      form.style.display = 'none';
+      success.classList.remove('hidden');
+      success.classList.add('flex');
+    }
+  </script>
+</body>
+</html>

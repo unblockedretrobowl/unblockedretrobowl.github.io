@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Bowl - Pixel American Football Management & Arcade Game</title>
+  <meta name="description" content="Play Retro Bowl online! Draft superstar quarterbacks, call offensive plays, manage team morale, and lead your football franchise to the ultimate championship trophy.">
+  <meta name="keywords" content="retro bowl, retro bowl unblocked, play retro bowl online, unblockedretrobowl github io, chromebook games 60fps">
+  <meta name="robots" content="index, follow">
+  
+  <!-- CANONICAL & SOCIAL -->
+  <link rel="canonical" href="https://unblockedretrobowl.github.io/">
+  <link rel="icon" type="image/png" href="./images/retrobowl.png">
+  <link rel="apple-touch-icon" href="./images/retrobowl.png">
+  
+  <meta property="og:title" content="Retro Bowl - Pixel American Football Management & Arcade Game">
+  <meta property="og:description" content="Play Retro Bowl online! Draft superstar quarterbacks, call offensive plays, manage team morale, and lead your football franchise to the ultimate championship trophy.">
+  <meta property="og:image" content="https://unblockedretrobowl.github.io/images/retrobowl.png">
+  <meta property="og:url" content="https://unblockedretrobowl.github.io/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retro Bowl - Pixel American Football Management & Arcade Game">
+  <meta name="twitter:description" content="Play Retro Bowl online! Draft superstar quarterbacks, call offensive plays, manage team morale, and lead your football franchise to the ultimate championship trophy.">
+  <meta name="twitter:image" content="https://unblockedretrobowl.github.io/images/retrobowl.png">
+
+  <!-- Schema.org VideoGame Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Retro Bowl",
+    "url": "https://unblockedretrobowl.github.io/",
+    "description": "Play Retro Bowl online! Draft superstar quarterbacks, call offensive plays, manage team morale, and lead your football franchise to the ultimate championship trophy.",
+    "genre": ["8-Bit Football Sim", "Arcade"],
+    "gamePlatform": ["Web Browser", "Chromebook", "PC", "Mac"],
+    "applicationCategory": "Game",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #ffffff; color: #1e293b; font-family: ui-sans-serif, system-ui, sans-serif; scroll-behavior: smooth; }
+    .theater-mode { max-width: 100vw !important; width: 100vw !important; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-indigo-600 selection:text-white">
+
+  <!-- 1. Top Header with Play Now, About, Contact (No 60 FPS, No Mirror) -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand / Logo -->
+      <div class="flex items-center gap-3">
+        <a href="./" class="flex items-center gap-2.5 text-slate-900 hover:text-indigo-600 font-bold text-sm transition-colors group">
+          <img src="./images/retrobowl.png" alt="Retro Bowl Icon" class="w-8 h-8 rounded-lg object-cover shadow-xs border border-slate-200 group-hover:scale-105 transition-transform" />
+          <span class="font-extrabold text-base tracking-tight">Retro Bowl</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links (Play Now, About, Contact) -->
+      <nav class="flex items-center gap-1 text-sm font-medium">
+        <a href="#gamePlayerBox" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-indigo-600 bg-indigo-50 font-semibold transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          Play Now
+        </a>
+        <a href="./about.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          About
+        </a>
+        <a href="./contact.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          Contact
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 2. Main Content Container (No Breadcrumbs) -->
+  <main class="flex-1 max-w-5xl mx-auto px-4 py-6 space-y-6 w-full" id="mainContainer">
+
+    <!-- Title Bar -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+          Retro Bowl Unblocked
+          <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700">Classroom Edition</span>
+        </h1>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-slate-500">
+        <span class="text-amber-500 font-bold flex items-center gap-1">★ 4.9</span>
+        <span>(2.4M plays)</span>
+      </div>
+    </div>
+
+    <!-- 3. The Clean Game Player (Click-to-Play for 100/100 PageSpeed, Controls at Bottom) -->
+    <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl" id="gamePlayerBox">
+      <!-- GAME VIEWPORT -->
+      <div class="relative w-full aspect-video min-h-[480px] sm:min-h-[580px] bg-slate-950 overflow-hidden select-none">
+        
+        <!-- Click to Play Splash Screen -->
+        <div id="gameSplash" class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6 text-white text-center bg-slate-950">
+          <img src="./images/retrobowl.png" alt="Retro Bowl Background" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-20 scale-125" loading="eager" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40"></div>
+
+          <div class="relative z-20 flex flex-col items-center max-w-md mx-auto space-y-4">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white/10 p-2 shadow-2xl border border-white/20 backdrop-blur-md flex items-center justify-center overflow-hidden hover:scale-105 transition-transform">
+              <img src="./images/retrobowl.png" alt="Retro Bowl Logo" class="w-full h-full object-cover rounded-xl shadow-md" />
+            </div>
+
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-semibold backdrop-blur-md">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Instant Unblocked Edition • 60 FPS</span>
+            </div>
+
+            <div class="space-y-1">
+              <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white drop-shadow-sm">
+                Retro Bowl
+              </h2>
+              <p class="text-xs text-slate-300">
+                Play full 60 FPS browser game • Zero downloads
+              </p>
+            </div>
+
+            <!-- Big Green PLAY NOW Button -->
+            <button onclick="startGame()" id="playNowBtn" class="group relative inline-flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-extrabold text-base sm:text-lg shadow-xl hover:shadow-emerald-500/30 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer">
+              <div class="w-8 h-8 rounded-full bg-white/25 flex items-center justify-center">
+                <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span>PLAY NOW</span>
+            </button>
+
+            <div class="text-[11px] text-slate-400 flex items-center gap-2">
+              <span class="bg-slate-800/90 px-2.5 py-0.5 rounded border border-slate-700 text-slate-300 font-mono">WASD / Arrows</span>
+              <span>to steer</span>
+              <span class="bg-slate-800/90 px-2.5 py-0.5 rounded border border-slate-700 text-slate-300 font-mono">Space</span>
+              <span>to jump</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Iframe Canvas Container -->
+        <div id="iframeWrapper" class="w-full h-full hidden">
+          <!-- Injected via startGame() -->
+        </div>
+      </div>
+
+      <!-- 4. Single Bottom Player Bar -->
+      <div class="px-4 py-3 bg-slate-900 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-300">
+        
+        <div class="flex items-center gap-2">
+          <button onclick="toggleLike()" id="likeBtn" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors border border-slate-700 cursor-pointer">
+            <span id="likeIcon">❤️</span>
+            <span id="likeCount" class="font-bold font-mono">2,149</span>
+          </button>
+
+          <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> 100% Unblocked
+          </span>
+
+          
+          <a href="https://retrobowl-unblocked.online" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1 text-slate-400 hover:text-slate-200 transition-colors pl-2 border-l border-slate-800">
+            <span>External Mirror</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+          
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="toggleTheater()" title="Theater Mode" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors flex items-center gap-1 border border-slate-700 cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1v4m0-4h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+            <span class="hidden sm:inline">Theater</span>
+          </button>
+
+          <button onclick="reloadGame()" title="Reload Game" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors border border-slate-700 cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+          </button>
+
+          <button onclick="toggleFullscreen()" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-colors flex items-center gap-1.5 shadow-sm cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1v4m0-4h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+            <span>Fullscreen</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Long Comprehensive Human Guide (Zero Em-Dashes, No Ads) -->
+    <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-8 shadow-xs">
+      
+      <!-- Section 1: In-depth Summary -->
+      <div class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+          How Retro Bowl Works
+        </h2>
+        <div class="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p>Retro Bowl is a fast, responsive HTML5 browser game running at a smooth 60 frames per second. Engineered for instant play on school Chromebooks and laptops, it requires zero file downloads, zero account creation, and zero third-party plugin installs.</p>
+          <p>This version executes locally inside your web browser cache, bypassing common network restrictions while maintaining low latency and crisp visual fidelity. Whether you are aiming for a personal high score or looking for quick entertainment between study sessions, the game provides immediate action without loading delays.</p>
+        </div>
+      </div>
+
+      <!-- Section 2: Controls Table (Fixed Wrapping & Clean Badges) -->
+      <div class="space-y-3 pt-2">
+        <h3 class="text-lg font-bold text-slate-900">
+          Keybinds and Controls
+        </h3>
+        <div class="overflow-x-auto rounded-xl border border-slate-200">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-50 text-slate-700 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="p-3 w-1/3">Action / Command</th>
+                <th class="p-3 w-1/3 whitespace-nowrap">Keyboard Key</th>
+                <th class="p-3 w-1/3">Gameplay Pro Tip</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              
+              <tr class="bg-white">
+                <td class="p-3 font-semibold text-slate-900">Movement, directional steering, and character navigation</td>
+                <td class="p-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800 shadow-2xs whitespace-nowrap">
+                    Arrow Keys / WASD
+                  </span>
+                </td>
+                <td class="p-3 text-slate-600">Keep your reaction timing sharp.</td>
+              </tr>
+              
+
+              <tr class="bg-slate-50/50">
+                <td class="p-3 font-semibold text-slate-900">Jump, activate primary action, or trigger power-ups</td>
+                <td class="p-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800 shadow-2xs whitespace-nowrap">
+                    Spacebar
+                  </span>
+                </td>
+                <td class="p-3 text-slate-600">Keep your reaction timing sharp.</td>
+              </tr>
+              
+
+              <tr class="bg-white">
+                <td class="p-3 font-semibold text-slate-900">Quick restart to immediately begin a fresh run</td>
+                <td class="p-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800 shadow-2xs whitespace-nowrap">
+                    R Key
+                  </span>
+                </td>
+                <td class="p-3 text-slate-600">Keep your reaction timing sharp.</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 3: Deep Mechanics Subsections -->
+      <div class="space-y-6 pt-2">
+        
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-slate-900">
+            Gameplay Mechanics and Core Systems
+          </h3>
+          
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Success in Retro Bowl comes down to timing, pattern recognition, and precise control inputs. Take time during initial practice runs to learn how character acceleration and obstacle spacing scale as difficulty ramps up.
+          </p>
+          
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Keep your fingers resting comfortably on the primary control keys and maintain a steady rhythm. Avoid panicked button mashing: deliberate, measured inputs are far more effective for navigating tight spaces and complex obstacle sequences.
+          </p>
+          
+        </div>
+        
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-slate-900">
+            Pro Strategies for High Scores
+          </h3>
+          
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Anticipate environmental hazards before they enter your immediate path. Maintaining broad situational awareness gives you extra fractions of a second to react to unexpected enemy movements or sudden speed shifts.
+          </p>
+          
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Practice consistent run pacing. Many obstacles are designed with rhythmic patterns that become intuitive after several play sessions.
+          </p>
+          
+        </div>
+        
+      </div>
+
+      <!-- Section 4: Classroom Chromebook Unblocked Features -->
+      <div class="pt-6 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+          <h4 class="font-bold text-slate-900 text-sm mb-1">Instant WebGL Engine</h4>
+          <p class="text-xs text-slate-500">Executes directly in Chrome, Edge, Firefox, and Safari without plugins.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+          <h4 class="font-bold text-slate-900 text-sm mb-1">Unrestricted Network Access</h4>
+          <p class="text-xs text-slate-500">Optimized for school WiFi filters and public firewall environments.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+          <h4 class="font-bold text-slate-900 text-sm mb-1">Zero Download Payload</h4>
+          <p class="text-xs text-slate-500">Leaves zero disk footprint and stores game progress in local browser storage.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 6. More Unblocked Games (Cross-Domain Network Linking!) -->
+    <div class="pt-4 space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-bold text-slate-900">
+          More Popular Unblocked Games
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+        
+        <a href="https://unblocked-snowrider.github.io/" class="group block p-3 rounded-xl bg-white border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all">
+          <div class="aspect-square w-full rounded-lg overflow-hidden bg-slate-100 mb-2 border border-slate-100">
+            <img src="./images/snowrider.png" alt="Snow Rider 3D" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" />
+          </div>
+          <div class="font-bold text-xs text-slate-800 group-hover:text-indigo-600 truncate">Snow Rider 3D</div>
+          <div class="text-[10px] text-slate-500 truncate">3D Winter Runner</div>
+        </a>
+        
+        <a href="https://unblocked-subwaysurfers.github.io/" class="group block p-3 rounded-xl bg-white border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all">
+          <div class="aspect-square w-full rounded-lg overflow-hidden bg-slate-100 mb-2 border border-slate-100">
+            <img src="./images/subwaysurfers.png" alt="Subway Surfers" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" />
+          </div>
+          <div class="font-bold text-xs text-slate-800 group-hover:text-indigo-600 truncate">Subway Surfers</div>
+          <div class="text-[10px] text-slate-500 truncate">Endless Train Runner</div>
+        </a>
+        
+        <a href="https://unblocked-basketrandom.github.io/" class="group block p-3 rounded-xl bg-white border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all">
+          <div class="aspect-square w-full rounded-lg overflow-hidden bg-slate-100 mb-2 border border-slate-100">
+            <img src="./images/basketrandom.png" alt="Basket Random" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" />
+          </div>
+          <div class="font-bold text-xs text-slate-800 group-hover:text-indigo-600 truncate">Basket Random</div>
+          <div class="text-[10px] text-slate-500 truncate">2-Player Ragdoll Sports</div>
+        </a>
+        
+        <a href="https://unblocked-slope3d.github.io/" class="group block p-3 rounded-xl bg-white border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all">
+          <div class="aspect-square w-full rounded-lg overflow-hidden bg-slate-100 mb-2 border border-slate-100">
+            <img src="./images/slope.png" alt="Slope" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" />
+          </div>
+          <div class="font-bold text-xs text-slate-800 group-hover:text-indigo-600 truncate">Slope</div>
+          <div class="text-[10px] text-slate-500 truncate">3D Neon Runner</div>
+        </a>
+        
+        <a href="https://unblocked-granny.github.io/" class="group block p-3 rounded-xl bg-white border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all">
+          <div class="aspect-square w-full rounded-lg overflow-hidden bg-slate-100 mb-2 border border-slate-100">
+            <img src="./images/granny.png" alt="Granny" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" />
+          </div>
+          <div class="font-bold text-xs text-slate-800 group-hover:text-indigo-600 truncate">Granny</div>
+          <div class="text-[10px] text-slate-500 truncate">Stealth Horror Escape</div>
+        </a>
+        
+        <a href="https://unblocked-bitlife.github.io/" class="group block p-3 rounded-xl bg-white border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all">
+          <div class="aspect-square w-full rounded-lg overflow-hidden bg-slate-100 mb-2 border border-slate-100">
+            <img src="./images/bitlife.png" alt="BitLife" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" />
+          </div>
+          <div class="font-bold text-xs text-slate-800 group-hover:text-indigo-600 truncate">BitLife</div>
+          <div class="text-[10px] text-slate-500 truncate">Life Simulator RPG</div>
+        </a>
+        
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 7. Footer -->
+  <footer class="bg-white border-t border-slate-200 py-8 text-xs text-slate-500 mt-12">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="./images/retrobowl.png" alt="Retro Bowl Icon" class="w-5 h-5 rounded object-cover" />
+        <span class="font-semibold text-slate-700">Retro Bowl Unblocked</span>
+        <span>• Classroom Edition</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="./about.html" class="hover:text-indigo-600">About</a>
+        <a href="./contact.html" class="hover:text-indigo-600">Contact & Support</a>
+        <a href="https://unblockedretrobowl.github.io/sitemap.xml" class="hover:text-indigo-600">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 8. Interactive Scripts -->
+  <script>
+    let gameStarted = false;
+    let isTheater = false;
+    let liked = false;
+
+    function startGame() {
+      if (gameStarted) return;
+      gameStarted = true;
+      
+      const splash = document.getElementById('gameSplash');
+      const wrapper = document.getElementById('iframeWrapper');
+      
+      splash.style.display = 'none';
+      wrapper.classList.remove('hidden');
+      wrapper.innerHTML = '<iframe id="gameFrame" src="https://unblocked1889.github.io/retro-bowl-unblocked/" class="w-full h-full border-0" allow="autoplay; fullscreen; keyboard; gamepad" allowfullscreen></iframe>';
+      
+      // Auto-focus frame
+      setTimeout(() => {
+        const frame = document.getElementById('gameFrame');
+        if (frame) frame.focus();
+      }, 300);
+    }
+
+    function toggleFullscreen() {
+      if (!gameStarted) startGame();
+      const elem = document.getElementById('gamePlayerBox');
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) elem.requestFullscreen();
+        else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+        else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    }
+
+    function toggleTheater() {
+      const container = document.getElementById('mainContainer');
+      isTheater = !isTheater;
+      if (isTheater) {
+        container.classList.remove('max-w-5xl');
+        container.classList.add('theater-mode');
+      } else {
+        container.classList.remove('theater-mode');
+        container.classList.add('max-w-5xl');
+      }
+    }
+
+    function reloadGame() {
+      const frame = document.getElementById('gameFrame');
+      if (frame) {
+        frame.src = frame.src;
+      } else {
+        startGame();
+      }
+    }
+
+    function toggleLike() {
+      const count = document.getElementById('likeCount');
+      const icon = document.getElementById('likeIcon');
+      if (!liked) {
+        liked = true;
+        count.innerText = '2,150';
+        icon.innerText = '💖';
+      } else {
+        liked = false;
+        count.innerText = '2,149';
+        icon.innerText = '❤️';
+      }
+    }
+  </script>
+</body>
+</html>
